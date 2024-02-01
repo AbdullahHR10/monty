@@ -27,6 +27,10 @@ int push(int x)
  */
 void pall()
 {
-	printf("%d\n", stack[count]);
-	count--;
+	int i;
+
+	for (i = count - 1; i >= 0; i--)
+	{
+		printf("%d\n", stack[i]);
+		count--;
 }
