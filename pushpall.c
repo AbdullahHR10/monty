@@ -6,6 +6,9 @@
  * Return: 1 on sucess, 0 on failure
  */
 
+int stack[MAX_SIZE];
+int count = 0;
+
 int push(int x)
 {
 	if (count < MAX_SIZE)
@@ -17,7 +20,7 @@ int push(int x)
 	else
 	{
 		fprintf(stderr, "Stack overflow!\n");
-		return (0);
+		exit);
 	}
 }
 
@@ -29,6 +32,10 @@ void pall()
 {
 	int i;
 
+	if (count == 0)
+	{
+		exit();
+	}
 	for (i = count - 1; i >= 0; i--)
 	{
 		printf("%d\n", stack[i]);

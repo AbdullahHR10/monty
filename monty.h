@@ -1,5 +1,9 @@
+#ifndef MONTY_HEADER
+#define MONTY_HEADER
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #define MAX_SIZE 100
 extern int stack[];
 extern int count;
@@ -31,3 +35,4 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+#endif
