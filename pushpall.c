@@ -32,5 +32,5 @@ void pall()
 	for (i = count - 1; i >= 0; i--)
 	{
 		printf("%d\n", stack[i]);
-		count--;
+	}
 }
